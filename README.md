@@ -1,2 +1,1 @@
-# shroud-app
-Official Shroud application
+# shroud-app-web
