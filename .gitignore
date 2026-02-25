@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+.pnpm-debug.log*
+
+# Environment
+.env*
+!.env.example
+
+# Build/Cache
+.cache/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
+# Rust/Tauri global targets (optional if kept in subfolders)
+**/target/
