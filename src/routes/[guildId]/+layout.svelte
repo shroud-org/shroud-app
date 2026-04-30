@@ -34,6 +34,7 @@
         flex-direction: column;
         width: 200px;
         height: 100%;
+        padding:10px;
         gap: 10px;
     }
 
