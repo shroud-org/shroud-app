@@ -3,20 +3,55 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="ALL" />
   </component>
-  <component name="CargoProjects">
-    <cargoProject FILE="$PROJECT_DIR$/apps/desktop/src-tauri/Cargo.toml">
-      <package file="$PROJECT_DIR$/apps/desktop/src-tauri">
-        <feature name="default" enabled="true" />
-      </package>
-    </cargoProject>
-    <cargoProject FILE="$PROJECT_DIR$/apps/mobile/src-tauri/Cargo.toml">
-      <package file="$PROJECT_DIR$/apps/mobile/src-tauri">
-        <feature name="default" enabled="true" />
-      </package>
-    </cargoProject>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="95e6b2a7-d43e-40d7-9a32-1ceb8164609f" name="Changes" comment="playing around with layouts" />
+    <list default="true" id="95e6b2a7-d43e-40d7-9a32-1ceb8164609f" name="Changes" comment="playing around with layouts">
+      <change afterPath="$PROJECT_DIR$/src-tauri/capabilities/desktop.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-tauri/capabilities/mobile.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/MessageItem.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Modal.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Pill.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Tabs.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Toast.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/UserAvatar.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/UserItem.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/UserLink.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/services/gateway.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/stores/channels.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/stores/guilds.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/stores/messages.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/stores/tabs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/stores/users.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/types/channel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/types/guild.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/types/message.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/types/tab.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/types/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/[guildId]/+layout.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/[guildId]/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/[guildId]/[channelId]/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/[guildId]/[channelId]/+page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/[guildId]/[channelId]/views/DocumentView.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/[guildId]/[channelId]/views/ForumView.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/[guildId]/[channelId]/views/TextView.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/[guildId]/[channelId]/views/VoiceView.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-tauri/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-tauri/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-tauri/capabilities/default.json" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/capabilities/default.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-tauri/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/[guildId]/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/[guildId]/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/[guildId]/+page.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ChannelItem.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/[guildId]/[channelId]/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/GuildItem.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/svelte.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tauri.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,20 +63,42 @@
       <list>
         <option value="index" />
         <option value="Button" />
+        <option value="Modal" />
+        <option value="Toast" />
+        <option value="Pill" />
+        <option value="Avatar" />
+        <option value="GuildAvatar" />
+        <option value="ChannelLink" />
+        <option value="Message" />
+        <option value="UserLink" />
+        <option value="UserItem" />
+        <option value="TextView" />
+        <option value="VoiceView" />
+        <option value="ForumView" />
+        <option value="DocumentView" />
         <option value="+layout" />
+        <option value="+page" />
         <option value="TypeScript File" />
+        <option value="tabs" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Shroud-Social/shroud-app",
-    "accountId": "22da8fb2-9e1f-4ac1-9bd2-b785a57b46fe"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jammy6903&quot;
   }
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Shroud-Social/shroud-app&quot;,
+    &quot;accountId&quot;: &quot;22da8fb2-9e1f-4ac1-9bd2-b785a57b46fe&quot;
+  }
+}</component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="SlxT3unO" />
   </component>
@@ -64,6 +121,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
@@ -110,7 +168,14 @@
       <workItem from="1776628396155" duration="806000" />
       <workItem from="1776967146689" duration="3750000" />
       <workItem from="1777050718279" duration="3258000" />
-      <workItem from="1777059860984" duration="328000" />
+      <workItem from="1777059860984" duration="1000000" />
+      <workItem from="1777400939513" duration="13000" />
+      <workItem from="1777400973587" duration="4265000" />
+      <workItem from="1777406698577" duration="632000" />
+      <workItem from="1777407340820" duration="199000" />
+      <workItem from="1777407566043" duration="9376000" />
+      <workItem from="1777480033182" duration="4431000" />
+      <workItem from="1777487368452" duration="10719000" />
     </task>
     <task id="LOCAL-00001" summary="playing around with layouts">
       <option name="closed" value="true" />
@@ -120,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777060101209</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="playing around with layouts">
+      <option name="closed" value="true" />
+      <created>1777060216511</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777060216511</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
