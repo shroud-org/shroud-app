@@ -1,5 +1,7 @@
 <script>
-    import {openTabs} from "$lib/stores/tabs";
+    import { openTabs } from "$lib/stores/tabs";
+    import ButtonTitleBar from "$lib/components/ButtonTitleBar.svelte";
+    import Plus from '@lucide/svelte/icons/plus'
 </script>
 
 <ul data-tauri-drag-region class="tabs">
@@ -7,7 +9,7 @@
         <li class="tab">{openTab.title}</li>
     {/each}
     <li>
-        <button class="tab new-tab">+</button>
+        <ButtonTitleBar iconOnly><Plus size={16} color="white"/></ButtonTitleBar>
     </li>
 </ul>
 
@@ -16,8 +18,9 @@
         display: flex;
         flex-direction: row;
         flex-grow: 1;
+        align-items: center;
         list-style: none;
-        padding: 0 0 0 0;
+        padding: 0;
         margin: 0;
         overflow-x: auto;
         white-space: nowrap;

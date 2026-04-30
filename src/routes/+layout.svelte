@@ -6,16 +6,28 @@
     import '$lib/components/Tabs.svelte'
     import Tabs from "$lib/components/Tabs.svelte";
     import GuildItem from "$lib/components/GuildItem.svelte";
+    import X from '@lucide/svelte/icons/x';
+    import Maximize_2 from "@lucide/svelte/icons/maximize-2";
+    import Minimize_2 from "@lucide/svelte/icons/minimize-2";
+    import Minus from "@lucide/svelte/icons/minus";
+    import ButtonTitleBar from "$lib/components/ButtonTitleBar.svelte";
 
     let isDesktopApp = $state(false);
     let appWindow = $state<any>(null);
+    let isMaximized = $state(false);
 
     onMount(async () => {
         isDesktopApp = !!(window as any).__TAURI_INTERNALS__ || !!(window as any).__TAURI__;
         if (isDesktopApp) {
             appWindow = getCurrentWindow();
+            isMaximized = await appWindow.isMaximized();
+            const isMaximizedListener = await appWindow.onResized(async () => {
+                isMaximized = await appWindow.isMaximized();
+            })
         }
     })
+
+
 
     const guilds: Guild[] = [
         {
@@ -39,15 +51,19 @@
             </div>
             <Tabs />
             <div class="window-controls">
-                <button id="titlebar-minimize" title="minimize" onclick={() => appWindow?.minimize()}>
-                    mini
-                </button>
-                <button id="titlebar-maximize" title="maximize" onclick={() => appWindow?.toggleMaximize()}>
-                    maxi
-                </button>
-                <button id="titlebar-close" title="close" onclick={() => appWindow?.close()}>
-                    close
-                </button>
+                <ButtonTitleBar iconOnly onClick={() => appWindow?.minimize()}>
+                    <Minus size={16} />
+                </ButtonTitleBar>
+                <ButtonTitleBar iconOnly onClick={() => appWindow?.toggleMaximize()}>
+                    {#if isMaximized}
+                        <Maximize_2 size={16} />
+                    {:else }
+                        <Minimize_2 size={16} />
+                    {/if}
+                </ButtonTitleBar>
+                <ButtonTitleBar iconOnly onClick={() => appWindow?.close()}>
+                    <X size={16} />
+                </ButtonTitleBar>
             </div>
         </div>
     {/if}
@@ -73,25 +89,16 @@
     .title-bar {
         display: flex;
         flex-direction: row;
+        align-items: center;
         width: 100%;
         height: 30px;
         gap: 5px;
     }
 
     .window-controls {
+        display: flex;
         white-space: nowrap;
-    }
-
-    .window-controls button {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 100%;
-    }
-
-    .window-controls button:hover {
-        background: #5bbec3;
+        gap: 3px;
     }
 
     .app-container {
@@ -115,6 +122,7 @@
         flex-shrink: 0;
         height: 100%;
         gap: 8px;
+        padding: 5px 0px 0px 0px;
         align-items: center;
     }
 
