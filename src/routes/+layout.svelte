@@ -7,12 +7,13 @@
     import Tabs from "$lib/components/Tabs.svelte";
     import GuildItem from "$lib/components/GuildItem.svelte";
 
-    let isDesktopApp = false;
+    let isDesktopApp = $state(false);
+    let appWindow = $state<any>(null);
 
-    onMount(() => {
-        isDesktopApp = !!window.__TAURI_INTERNALS__ || !!window.__TAURI__;
+    onMount(async () => {
+        isDesktopApp = !!(window as any).__TAURI_INTERNALS__ || !!(window as any).__TAURI__;
         if (isDesktopApp) {
-            const appWindow = getCurrentWindow();
+            appWindow = getCurrentWindow();
         }
     })
 
@@ -120,5 +121,8 @@
     .content-wrapper {
         display: flex;
         flex-grow: 1;
+        border-left: 1px solid rgb(255 255 255 / 0.2);
+        border-top: 1px solid rgb(255 255 255 / 0.2);
+        border-radius: 25px 0px 0px 0px;
     }
 </style>
