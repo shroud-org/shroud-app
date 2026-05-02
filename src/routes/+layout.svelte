@@ -11,6 +11,7 @@
     import Minimize_2 from "@lucide/svelte/icons/minimize-2";
     import Minus from "@lucide/svelte/icons/minus";
     import ButtonTitleBar from "$lib/components/ButtonTitleBar.svelte";
+    import Brand from "$lib/components/Brand.svelte"
 
     let isDesktopApp = $state(false);
     let appWindow = $state<any>(null);
@@ -46,8 +47,8 @@
 <div class="app-container">
     {#if isDesktopApp}
         <div data-tauri-drag-region class="title-bar">
-            <div data-tauri-drag-region class="brand" style="color: #ffffff">
-                shroud.social
+            <div data-tauri-drag-region class="brand">
+                <Brand size={16} />
             </div>
             <Tabs />
             <div class="window-controls">
@@ -56,12 +57,12 @@
                 </ButtonTitleBar>
                 <ButtonTitleBar iconOnly onClick={() => appWindow?.toggleMaximize()}>
                     {#if isMaximized}
-                        <Maximize_2 size={16} />
+                        <Minimize_2 size={14} />
                     {:else }
-                        <Minimize_2 size={16} />
+                        <Maximize_2 size={14} />
                     {/if}
                 </ButtonTitleBar>
-                <ButtonTitleBar iconOnly onClick={() => appWindow?.close()}>
+                <ButtonTitleBar iconOnly variant="danger" onClick={() => appWindow?.close()}>
                     <X size={16} />
                 </ButtonTitleBar>
             </div>
@@ -91,14 +92,20 @@
         flex-direction: row;
         align-items: center;
         width: 100%;
-        height: 30px;
+        height: 36px;
         gap: 5px;
+    }
+
+    .brand {
+        padding: 6px;
+        opacity: 87%;
     }
 
     .window-controls {
         display: flex;
         white-space: nowrap;
         gap: 3px;
+        padding-right: 5px;
     }
 
     .app-container {
