@@ -30,7 +30,7 @@
         text-decoration: none;
         color: #ffffff;
         font-weight: bold;
-        font-size: 1.3vw;
+        font-size: 0.9rem;
     }
 
     img {
