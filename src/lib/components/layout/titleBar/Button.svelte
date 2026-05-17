@@ -6,7 +6,7 @@
         children: Snippet,
         iconOnly?: boolean,
         variant?: ButtonVariant,
-        onclick?: () => void
+        onClick?: () => void
     } = $props();
 
     function iconOnlyClass(): string {
@@ -37,16 +37,21 @@
     }
 
     button.default:hover {
+        border: 1px solid rgb(255 255 255 / 0.3);
+        background: rgb(255 255 255 / 0.2)
+    }
+    button.default:active {
         border: 1px solid rgb(255 255 255 / 0.2);
         background: rgb(255 255 255 / 0.1)
     }
 
     button.danger:hover {
-        border: 1px solid rgb(255 0 0 / 0.2);
-        background: rgb(255 0 0 / 0.3)
+        border: 1px solid rgb(255 0 0 / 0.5);
+        background: rgb(255 0 0 / 0.4)
     }
 
-    button:active {
-        background: rgb(255 255 255 / 0.2)
+    button.danger:active {
+        border: 1px solid rgb(255 0 0 / 0.4);
+        background: rgb(255 0 0 / 0.3)
     }
 </style>
