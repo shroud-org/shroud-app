@@ -1,6 +1,6 @@
 <script lang="ts">
     import {type Channel, ChannelType} from '$lib/types/channel'
-    import ChannelItem from "$lib/components/ChannelItem.svelte";
+    import ChannelItem from "$lib/components/guild/channel/ChannelItem.svelte";
 
 
     const channels: Channel[] = [

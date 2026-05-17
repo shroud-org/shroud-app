@@ -1,5 +1,7 @@
 export interface Tab {
-    location: string;
+    id: string;
+    url: string;
     title: string;
-    customTitle: string | null;
+    favicon: string;
+    active: boolean;
 }

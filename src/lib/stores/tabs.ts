@@ -1,28 +1,18 @@
 import { writable } from 'svelte/store'
 import type { Tab } from '$lib/types/tab'
+import { Webview } from "@tauri-apps/api/webview";
+import { getCurrentWindow } from "@tauri-apps/api/window";
 
-export const openTabs = writable<Tab[]>([]);
+const appWindow = getCurrentWindow();
 
-export function newTab(location: string, title: string) {
-    openTabs.update((tabs: Tab[]) => {
-
-        const exists = tabs.some(t => t.location === location)
-        if (exists) return tabs;
-
-        return [...tabs, {
-            location: location,
-            title: title,
-            customTitle: null,
-        }];
+export async function createTab(id: string, url: string, bounds: DOMRect) {
+    const webview = new Webview(appWindow, id, {
+        url,
+        x: bounds.x,
+        y: bounds.y,
+        width: bounds.width,
+        height: bounds.height,
+        transparent: true,
     });
-}
-
-export function closeTab(location: string) {
-    openTabs.update((tabs) => {
-        return tabs.filter(t => t.location !== location)
-    })
-}
-
-export function setTitle(channelId: string, title: string) {
-
+    return webview;
 }
